@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export interface URLData {
   id: string;
@@ -88,7 +88,7 @@ class ApiService {
   }
 
   async redirectUrl(shortCode: string, password?: string): Promise<{ redirectUrl?: string; requiresPassword?: boolean; error?: string }> {
-    const endpoint = `http://localhost:5000/${shortCode}`;
+    const endpoint = `${import.meta.env.VITE_API_BASE_URL?.replace(/\/api$/, '')}/${shortCode}`;
     const config: RequestInit = {
       credentials: 'include',
       headers: {
