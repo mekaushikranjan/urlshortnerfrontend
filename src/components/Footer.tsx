@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center justify-center space-x-2">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>by Pranav</span>
+            <span>by Pranav, Aditya and Avika</span>
           </div>
           <div className="mt-2 text-sm">
             © 2025 ShortURL. All rights reserved.
