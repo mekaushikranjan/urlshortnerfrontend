@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL?.endsWith('/api')
+  ? import.meta.env.VITE_API_BASE_URL
+  : import.meta.env.VITE_API_BASE_URL + '/api');
 
 export interface URLData {
   id: string;
